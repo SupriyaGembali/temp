@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>Criminal Detection</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    body {
+        font-family: 'Poppins', sans-serif;
+    }
+    .wrapper {
+        width: 1170px;
+        margin: auto;
+    }
+    header {
+        background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(https://i.postimg.cc/YjcJg24M/aa.jpg);
+        height: 100vh;
+        -webkit-background-size: cover;
+        background-size: cover;
+        background-position: center center;
+        position: relative;
+    }
+    .nav-area {
+        float: right;
+        list-style: none;
+        margin-top: 30px;
+        
+    }
+    .nav-area li {
+        display: inline-block;
+    }
+    .nav-area li a {
+        color: #fff;
+        text-decoration: none;
+        padding: 5px 20px;
+        font-family: poppins;
+        font-size: 16px;
+        text-transform: uppercase;
+    }
+    .nav-area li a:hover {
+        background: #fff;
+        color: #333;
+    }
+    .logo {
+        float: left;
+    }
+    .logo img {
+        width: 100%;
+        padding: 15px 0;
+    }
+    .welcome-text {
+        position: absolute;
+        width: 600px;
+        height: 300px;
+        margin: 20% 30%;
+        text-align: center;
+    }
+    .welcome-text h1 {
+        text-align: center;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 60px;
+    }
+    .welcome-text h1 span {
+        color: #00fecb;
+    }
+    .welcome-text a {
+        border: 1px solid #fff;
+        padding: 10px 25px;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 14px;
+        margin-top: 20px;
+        display: inline-block;
+        color: #fff;
+    }
+    .welcome-text a:hover {
+        background: #fff;
+        color: #333;
+    }
+    /*resposive*/
+    
+    @media (max-width:600px) {
+        .wrapper {
+            width: 100%;
+        }
+        .logo {
+            float: none;
+            width: 50%;
+            text-align: center;
+            margin: auto;
+        }
+       
+        .nav-area {
+            float: none;
+            margin-top: 0;
+        }
+        .nav-area li a {
+            padding: 5px;
+            font-size: 11px;
+        }
+        .nav-area {
+            text-align: center;
+        }
+        .welcome-text {
+            width: 100%;
+            height: auto;
+            margin: 30% 0;
+        }
+        .welcome-text h1 {
+            font-size: 30px;
+        }
+    }
+    
+</style>
+<body>
+    <header>
+    <div class="wrapper">
+        <div class="logo">
+            <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMREhEQEA8SDxAVGBURDxAWFhAODw8QFh0ZFxURFRYYJyggGBsmGxUTITUhJSorMS4vFx8zODMtNyotLysBCgoKDg0OGxAQGi0lICUrLi8uKzU2LSstNS0tNS0tLS0rNS0vLS0tLS0tLS0tLS0tKy0tLy0tLS0vLS0vLS0uLf/AABEIAOkA2AMBIgACEQEDEQH/xAAcAAEAAgMBAQEAAAAAAAAAAAAABQYBBAcCAwj/xABIEAACAQICBAoEDAQDCQAAAAAAAQIDEQQhBQYSMRMiQVFhcXJzscIHJDKyIyUzNEJSgYSRocHwFGSCkmLD0RUWREVTg6LT4f/EABsBAQACAwEBAAAAAAAAAAAAAAAEBQIDBgEH/8QAPREAAgECAwUEBQkIAwAAAAAAAAECAxEEEjEFIUFhcVGBscETMzRyoQYiJDKCkcLR8CU1QlJzsuHxYpLS/9oADAMBAAIRAxEAPwDlYABkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI70BHegAAAAAAAAAAAAAAAAAAAAYABkGAAZAAAAAAAAAAAAAAAjvQEd6AAAAAAAAAAABuaP0ZUr34NKysm27JXN7F6uTpUp1Z1IcVJ7Ku75pb3a2/mM1Tm1mS3dpoliqMZqDkrvdbqQhkumi9VaMoU5ydSblCE2tpKKur2WxZ/mROuGAp0KlKNKCgnTbdru72nm2zOVCUYZmRqW0qNWsqUL337+G74/AgTDAluZoZYre0i0YTUirJJzq0odCU6jt+R8v924/xf8AC8LO3A8Nt2V73ta3MdHo08l1IrWz8cW/lPOWksNTjbdxONo7XxVTM3LSLe5LXcQWJ1IrL5OrSn0Pbpv9SNxGrmKhvoOa54ONS/2J3/I6s6Z4lSDwdN6XFPb2JjullfVfk14HGqtGUPbhOHaTp+J4OxVKV8mrrm3kVidBYed26FJN72oqnJ/bCzNTwT4SLClt+L+vT+538beJzEyXLSmq1GMKk4cJBxhOaW0mnZXs9u7IbC6uzq0oVY1IcZX2XdWza3q993MR5YeadrFlT2lh5wz3sr23ri+lyGBt6Q0bUoW4RKzuk07p2NQ1NNOzJsJxms0XdAAHhkAAAI70BHegAAAAAAAAAAWvUlXjU7cfBkxrFH1at2fNEi9RFxavbj4MmdZY+q1+x5ollT9n7mcriZftJe/D8JvaGh8BQ7qn7iKn6Q1atR7vzsumhIfAUO6p+4in+klfDUO687MsT6n7iPsl/To/a8GVE8y3M9HmW5lU9DtI/WXU7lSjkupFXt8c/c/OW2ksl1Iq1vjr7n5y8qcOqPmuFe6fuS8iyVY5PqZxnB6Vr00tjE1o7suEm4/g7o7VWWT6mcJjuRDxracbc/Iv/k7GM41VJJ/U13/zFhoa44qO+VOr3lPO3XT2Syat6wyxcpwlTUHGG3dSbTs7Ws1l+Jzwtno4V69buvPE10K1R1Em9xO2ngcNTw06kIJNW03cUuFl8C0aYh8BX7FT3GRer0fVqPZ80ia01H4Cv3VT3GRWrcfVaHZ80ia/WLo/FFBTl9Ffvx/tkQeui4tPtS8EVYtuvC4tLty8EVErsT61nVbLf0WPf4syADQWAAAAjvQEd6AAAAAAAAAMAFz1AXFq9uPgyb1oXqlfseaBDej5cWt24+DJvWtep4jseaBZ0/Z+5nI4t/tRe/D8JJ6FXq+H7ql7iKZ6S/lqHdedl20GvV8P3VL3EUr0mfL0O688jLFep+7xI+x/b4/a8GU88y3PqPR4nufUypeh3EdUd8pRyXUiq2+O/uXnLfQXFj1Iqdvjv7l/mF5U4dUfMMK90/cl5FnqxyfUzgkdy6jv9ZcWXUzgENy6iHjf4e/yOj+TDuq32PxHot3o1+Xrd154lRN/Q+mKuFlKdHg7yjsPbTmrN3ys0RKU1Caky/x9GdfDTpw1fdxTOo6bj6vX7qr7jInVleqUOx5pFVxGueKnGUJKhsyi4StTknstWduN0ls1WXqlDs+aZYQqxqVPm9j8jl62Dq4XC2q23zjo76KRBa+Li0u3LwRUC5a/+zS7cvBFNIeK9azodkeyR7/FgAEcsgAABHegI70AAAAAAAAAAC6+jz2K3bj4MnNa/meI7HmgQfo89it24eDJ7Wv5niOx5oFnT9n7mcfi/wB6r+pD8JJ6E+b4fuaXuIpXpO+Wod152XXQnzfD9zS9xHvG6HoV5RnWowqyitmO3dpK97W3G2tTdSGVcivwWKjhcV6WSbSvpa++/bY4rdbr58i5Wb2G0Hiat1TwleXTwc4R/ulZHZ8FgaVLKlRp0uxCFLwN2LIywK4yLOr8p5r1dJLq2/gkvEzSjkupFTt8efcv8wt8SmV68Yac2pzhTTwainNqCcnN2V3y5P8AAl1eHVHPYRN+kS/kl5FvqxyfUzheK0JiaVlUwlePTwc5x/ujdHdttPNO651mj5yMK1BVbXdrEnZm1J4JyyRTzWvflfT7+KZ+f7rdfPlXKgdzxmCpVcqtGnV7cIVfEhcVqfg5/wDDqn3bnS/JPZ/IiSwUuDXgdFS+UlJv59Nro1L/AMnJjqOq3zSh2fNMidKajUqcKtSnXrcSE6mzNUp+wm7ZKL5CV1X+aYfseaZnh6Uqc2pdhr2pjaOKw0XSek1e6twl+XC5BekD2aPbl4IppcvSD7NHtz8EU00Yr1rLXY/skesvFgAEcsgAABHegI70AAAAAAAAAAC6+j32K3bj4Mndan6niOx5oFf9H74tbtx8GTutL9UxHY80Czp+z9zOQxX70X9SH4SW0J83w/c0vcRo6y60RwUoQdKVSUoba4ypxSvbN5v8jd0K/V8P3VL3EUv0mfL0O687NlebhTzR13EHZ2Hp18WqdRXTv2rS/YYxPpDxL+TpUKXWqlV+8l+REY3WzG1FK+KqQVnlT2KNupxSf5kMYlufUVkq1R6yf66HY0dmYOm1lpR71fxufoKjLJdSOU+k359/2KXjUOpUpZR6kUXTuiY4vSvA1ZVIx/hI1L03GMrwm0vaTVuM+QssVFyhlXFo4nYtaNDEelnooy6lBw+InT+Tq1KXdznS9wlcLrXjadrYqpNc1TZr363NN/mXKfo7wqTfD4vJX9rD/wDrOZp5Ir5050bb9ew67DYnCbRzNQvltfNFPW9u3sLfhvSFiV8pSoVOpVKT95r8iz6t60RxkpwVGVOUYcI+MqkWk7ZPJ/kcqLd6NPl63deeJuoV6jmot3RD2nsvCUsNOpCFmtLN9qWl7fAu2m/m+I7qr7jInVZ+qYfseaZKacfq+I7qr7jInVh+qUOx5pk1+sXR+KOfpr6K/fj/AGzIX0gezR7cvBFNLjr8+LS7cvBFOK7FetZ12yPZI9ZeLAAI5ZAAACO9AR3oAAAAAAAAAwAXLUJ8Wr24+DJrWd+qV+x5ole1HqZVY8t4PxX6E9rCr4Wvbeqbl/Zaf6FnS34e3J+ZyeM+btK74Tg/7SY0JL1fD91S9xFN9JXy1DuvOy0avYhTw+Hkv+nBPoaVmvxTKr6R3evQ7rzs9xLvRv0NGyoOO0EnwzL4MqZ5luZkxLcyqeh2sfrLqd5pSyXUiq3+O/ufnLNSlkupFWv8dfc/OXlTh1R80wi3T9yXkW2tLJ9TODR3I7pVlk+pnC47kQ8d/D3+R0PyaVlV+x+I9Ft9G3y9buvPEqJdPR1hmuGrPKL+CXS1acvJ+ZHwyvVRbbXaWDnfjbxX66XZatNy+Ar91U9xkVq1L1Wh2PNI29YMQoYfES/wTS62rJfi0aOr6thaF+Wmn/dx/wBSxfrF080ctTj9Fa/5r4KV/FERr0+LS7cvBFQLTrrUyox5bzfgirldifWM6vZSthI9/iwADQWAAAAjvQEd6AAAAAAAAAABL6rYrg66T3TTp/1POPhb7S9Raas808mudHLotppp2azT5U1uZftDaRVampfSWU1zT5fs5SdhKn8H3HP7Zw29VV0fl8N3cjxq1W/h6lTAzfK6uHb+lSe9de9/38xGekB3rUe787JbTOAdaMZ03s16b26UvZv/AIH+/wBSr6waR/iJUnKLhUjB06sbONqik72Fb5lNwfd07O7wMcDH02KjiFrvz8pNfW6S15SunwvEnl7mZD3MgPQ6OOqO30ZZLqRWP+c/c/OTtOpkupFc2/ja/wDKW/8AMu6nDqj53ho7p+5ItlWWT6mcQjuR2WtUyfUzlWhtEVMTK0FaCtt1H7EejpfR4ETGJycUufkXmwZRpQrSm7JZd/8A2MaI0dPE1FThlyzn9GnD6z/Rcp03CUIUacaVNWhFWXO+dvnbeZraNwNPDwVOmst8pP25y+tN/uxq6c0uqEUorbrTypU/abe67XN4m2lTjRi5S14/kR8ZiamPqqnTXzb7l2832eS133NHWOtw9SngoPlVXENfRpLk/X+znJWTSVlklklzIjdDYB0oynUe1XqPbqy9r+hdX75DGmNIKjTcvpPKC55/6cplHcnOX+lwX643MZRzuNClvS05yer6aJckVrWfFbddpboJU32t8vG32EQZk73bd282+d84KucnKTkzraNJUqcYLggADE2AAACO9AR3oAAAAAAAAAAGDd0VpB0J7Szi8px+sv8AVGmYPU3F3RjOEZxcZK6Z0XC4qM4qUXeLzTI3TuhVX+Ep2jVW/kVRcz6en9quaK0nKg/rQftR/VdJb8Li41IqUJXi/wB2fMyyhUhXjZ/rmjmq2Hq4Kqpwe7g/J/511XKh1Kbi3GScZLJp5NM8S3F40po2FdcbizXszW/qf1kVHH4CdF2msn7MlnCXU/0IVajKnv4F3g8dCu0tJdn5dvidPp1cl1Igdv4zv/LeckKNdOMWmmmlZrNMhtv4xv8Ay/mLGq/q9Ucrh4Wz+7Is8qh8aMI04qEIqEFkorJI+FSukm5NJLNt5JIhMRpapXbp4RZbp13lCPY/f2cplOajrrw7TGjhp1L20Wre5LXX4249hIaW00qVqcFwteWUKa41r8s+ZfvpNbRmjnGTr15cJiJcu9U19SH7/wDudHaPhRu77dR+3UlnOXP1I+mLxkacXKbsl+LfMudmCTbzT4aLgvzfw7CVeMV6Kjx1lxlyS4R5avV9h9cViowi5TezFb2UnSmPdee08orKEfqr/VmdJ6RlXld5QXsQ5ul87NIg16+fctC8wGB9Cs8/rP4f57X3IyACOWQAAAAAAjvQEd6AAAAAAAAAAAAABg2cFjJ0pbUH2o/Rkuk1zB6m07o8lFSVpK6Lho/SsKqyezPlg9/WudG5UtJOMkpRe9PNMokXbNOzW57miYwOm2squa+us3/UuUm08UnumUmI2Y4vNS38uK6f7v14SEsFUotyws+LvdGbvB9n9/aaX+0pfxHCcDPhOD4Lg877d9/ZJWliVJXi1Jc6zPfCmz0emR2Wvau6+nhyI6ru79LDM7WvvT+129+/maiwVSs1LEz4u9UYO0F2v39pJ07RSjFKMVuSySNOriVFXlJJc7yIfG6bbypZL673/wBK5A5Qpb3q+9sRpVsS0kvmruivK/3sl9IaUjSWb2pckFv+3mRWcbjJ1ZbU31R+jHqNaTvm3d8r3tgh1a0qnQuMLg4UN63vt/Ls8eYMgGkmAAAAAAAAACO9AR3oAAAAAAAAAAAAAAAAAwZAB7o1ZQd4ycX+F+vnN7/a8rW2Y7XPnb8CNBnGpKOjNVShTqO81f8AX61PpWqym7ybk/Dq5j5gyYG1JLcgAAAAAAAAAAAAAABHegI70AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABHegI70ADFugW6D4Yeg6kowgryllFZK75Fnyvd1n1WAqOEKipTlCdtmSjKUc5OCTaWTclZLe7rnRnk5nmY9W6BboPU9E11s3w9XjKUklTqOSUXsyukrqztv51zo+1HQNeUOEcI04uSpw4WUKEqs7Rls04zs5ZSi8t91a4yLtFz4W6BboPpiNB4mEnGWFr3VR0E1SquMqybXBxaVpSyeSPU9BV47O3SdNOLleacFGzqR2JtrizvSqcV58UZeYufC3QLdBqA9yczzMbdugW6DUAycxmNu3QLdBqAZOYzG3boFug1AMnMZjbt0C3QagGTmMxt26BboNQDJzGY27dAt0GoYGTmMxuW6BboNQwMgzG5boFug0zIyDMbdugW6DTuhtLnQ9HzGY3orNZGDTAycxmPVOo4uMovZlFqUXzSTun+KROS1mne6pQgk7U4xyjCk9hOk8tpq0FmnHNt55WgQZnhK0dLRjGEFQvCEozpp1LzUoOU4bUkltJSqVbqyuprdspm1g9Z50nXnGn8JVvdupV4HOOxxqKajUazcW9zd87IgALAtD1zneclhaSc1OlU49a0sNOVSpKirNbL2qs+Os0rct24/SmnOHoUcNwEYU6G1/DWlKUqcZynKcW37Se1T37uCVt7RDg8sgAAengAAAAAAAAAAAAAAAN3RukXQcrQp1FLZvGcduPFfN0xlUg+icjSAPSbp6wWeeDwslv2XTWzflyXUvxlz5HrC3GEZ4bDVNmOwnODle9lmr2txVZK1s+chALAmKmnNqfCPC0G9mNO2zxXGGzZtcsrRs3zZGXp9/Rw2Hg9pTjOEFTnBZXgpLPZdpf3MhgLAsM9baru+DpptxldOrk4u6yct2Sy59p8rEdbK2zGMoQls2tLNSclHY2pNZSum7pprda1ivA8sgbOksY69WdaUYxlNpuMbqKaSWV+q/wBoNYHp4f/Z" style="border-radius: 78%;width: 91px;" alt="">
+        </div>
+<ul class="nav-area">
+<li><a href="#">Home</a></li>
+
+<li><a href="/index">Face Recognition</a></li>
+
+<li><a href="/contact">Contact Officials</a></li>
+
+<li><h2 style="color: aliceblue;"> user: </h2><h1 style="color: aqua;font-size: 16px;">  <%= name %> </h1></li>
+
+</ul>
+</div>
+<div class="welcome-text">
+        <h1>
+Hacker  <span>Soft</span></h1>
+<h1>
+    <div class="down" style="font-size: 15px;font-family: monospace;font-weight: lighter; ">
+    A 24/7 companion to ensure your safety
+</div>
+
+
+<div class="down" style="font-size: 19px;font-family: monospace;font-weight: lighter; /* top: 36px; */margin-top: 235px;color: #c4c3c3;">
+    Feeling suspicious ??? No Worries !!! Upload the image in HackerSoft 
+</div>
+
+    </div>
+
+   
+    
+</header>
+
+
+
+</body>
+</html>
